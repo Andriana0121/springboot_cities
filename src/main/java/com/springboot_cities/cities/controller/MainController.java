@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public  class  MainController {
+public class MainController {
     @GetMapping("/")
-    public String mainPage() {
-        return "This is main page";
+    public String mainPage(){
+        return "this is main page";
     }
 }
