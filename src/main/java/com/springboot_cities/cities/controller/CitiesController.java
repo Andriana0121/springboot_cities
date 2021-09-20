@@ -20,6 +20,12 @@ public class CitiesController {
     public String readAll(){
         return citiesRepository.readAll();
     }
-
-
+    @PutMapping("cities/{id}")
+    public  String  update ( @PathVariable  Integer  id , @RequestParam  String  countryName ){
+        return citiesRepository.update(id, citiesName);
+    }
+    @DeleteMapping("cities/{id}")
+    public  String  delete ( @PathVariable  Integer  id ){
+        return citiesRepository.delete(id);
+    }
 }

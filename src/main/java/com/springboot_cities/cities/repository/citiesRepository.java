@@ -30,5 +30,21 @@ public class citiesRepository {
     public String readAll(){
         return this.cities.toString();
     }
+    public String update(Integer id, String citiesName){
+        try {
+            this.cities.set(id, citiesName);
+            return "City updated";
+        } catch (Exception exception){
+            return "City not found";
+        }
+    }
+    public String delete(Integer id){
+        try {
+            this.cities.remove(this.cities.get(id));
+            return "City deleted";
+        } catch (Exception exception){
+            return "City not found";
+        }
+    }
 }
 
