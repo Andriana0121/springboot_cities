@@ -4,19 +4,19 @@ public class city {
     private Integer id = null;
     private String name = null;
 
-    private Integer countryId = null;
+    private Integer idCountry = null;
     private String countryName;
     public  static  Integer autoincrementId =  0 ;
 
-    City(String cityName, Integer countryId) {
+    city(Integer idCountry) {
 
     }
 
-    public City(String name, Integer countryId, String countryName) {
-        City.autoincrementId++;
-        this.id = City.autoincrementId;
+    public city(String name, Integer idCountry, String countryName) {
+        city.autoincrementId++;
+        this.id = city.autoincrementId;
         this.name = name;
-        this.countryId = countryId;
+        this.idCountry = idCountry;
         this.countryName = countryName;
     }
 
@@ -36,14 +36,13 @@ public class city {
         this.name = name;
     }
 
-    public Integer getCountryId() {
-        return countryId;
+    public Integer getidCountry() {
+        return idCountry;
     }
 
-    public void setCountryId(Integer countryId) {
-        this.countryId = Country.autoincrementId;
+    public void setidCountry(Integer countryId) {
+        this.idCountry = country.autoincrementId;
     }
-//     todo to implement this method which country the city belongs to
 
     public String getCountryName(){
         return countryName;
@@ -58,7 +57,7 @@ public class city {
         return "City{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", cityId=" + countryId +
+                ", cityId=" + idCountry +
                 ", cityName=" + this.getCountryName() +
                 ' } ' ;
     }
