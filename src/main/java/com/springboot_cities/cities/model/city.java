@@ -40,7 +40,7 @@ public class city {
         return idCountry;
     }
 
-    public void setidCountry(Integer countryId) {
+    public void setidCountry(Integer idCountry) {
         this.idCountry = country.autoincrementId;
     }
 
